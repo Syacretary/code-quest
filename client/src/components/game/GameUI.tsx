@@ -34,17 +34,17 @@ export function GameUI() {
   const [lastOutputTime, setLastOutputTime] = useState(0);
   const [activeChallengeType, setActiveChallengeType] = useState<string | null>(null);
 
-  // Only show the interface when the game is in playing phase
-  if (phase !== "playing") {
-    return null;
-  }
-
   // Initialize code when challenge changes
   useEffect(() => {
     if (currentChallenge) {
       setCode(currentChallenge.starterCode);
     }
   }, [currentChallenge]);
+  
+  // Only show the interface when the game is in playing phase
+  if (phase !== "playing") {
+    return null;
+  }
 
   // Handle running code
   const handleRunCode = async () => {
