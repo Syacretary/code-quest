@@ -12,7 +12,7 @@ interface LeaderboardEntry {
 
 export default function LeaderboardPage() {
   // Fetch leaderboard data
-  const { data: leaderboard, isLoading, error } = useQuery({
+  const { data: leaderboard, isLoading, error } = useQuery<LeaderboardEntry[]>({
     queryKey: ["/api/leaderboard"],
     retry: false,
   });
@@ -67,7 +67,7 @@ export default function LeaderboardPage() {
   }
 
   // Determine which data to use (API or mock)
-  const displayData = leaderboard || mockLeaderboard;
+  const displayData: LeaderboardEntry[] = leaderboard || mockLeaderboard;
 
   // Get avatar color based on type
   const getAvatarColor = (type: string): string => {
@@ -99,7 +99,7 @@ export default function LeaderboardPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {displayData.map((entry, index) => (
+                  {displayData.map((entry: LeaderboardEntry, index: number) => (
                     <tr key={index} className="border-b last:border-0">
                       <td className="py-3">
                         <div className="font-bold">{index + 1}</div>

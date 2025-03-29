@@ -45,11 +45,41 @@ function App() {
 
   if (isLoading || isCheckingUser) {
     return (
-      <div className="h-screen w-full flex items-center justify-center bg-background">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4 font-display text-primary">Code Quest</h1>
-          <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
-          <p className="mt-4 text-lg">Loading adventure...</p>
+      <div className="h-screen w-full flex items-center justify-center bg-background relative overflow-hidden">
+        {/* Background particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-primary/30"
+              style={{
+                width: `${Math.random() * 10 + 5}px`,
+                height: `${Math.random() * 10 + 5}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.5 + 0.3,
+                animation: `float ${Math.random() * 10 + 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          ))}
+        </div>
+        
+        <div className="text-center z-10 px-4 max-w-md">
+          <h1 className="text-5xl font-bold mb-4 neon-text text-primary tracking-wide">Code Quest</h1>
+          <p className="text-xl mb-8 text-secondary">Learn to Code by Playing – Level Up Your Programming Skills!</p>
+          
+          <div className="relative">
+            <div className="w-20 h-20 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto neon-glow"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-xs font-code opacity-80">LOADING</div>
+          </div>
+          
+          <p className="mt-6 text-lg font-code">
+            <span className="inline-block animate-pulse">Initializing adventure</span>
+            <span className="animate-bounce inline-block">.</span>
+            <span className="animate-bounce inline-block delay-100">.</span>
+            <span className="animate-bounce inline-block delay-200">.</span>
+          </p>
         </div>
       </div>
     );
