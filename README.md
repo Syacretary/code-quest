@@ -14,7 +14,26 @@
 🔹 **For Educators**: Engage students with interactive challenges.  
 🔹 **For Devs**: Sharpen skills by solving puzzles.  
 
-![Gameplay Screenshot](https://via.placeholder.com/800x400/111827/00D166?text=Code+Quest+Gameplay) *(Replace with actual screenshot)*  
+---
+
+## **⚠️ Important Notice**  
+**This project is currently in active development!**  
+- Some features may be incomplete or buggy  
+- Game content is limited (only X levels available)  
+- UI/UX will improve over time  
+- Expect breaking changes in updates  
+
+**We welcome your feedback!** (See *Contributing* section below)  
+
+---
+
+## **🤝 Contributing**  
+**Especially needed right now**:  
+1. UI/UX designers for better game interfaces  
+2. JavaScript/Python challenge creators  
+3. Beta testers to report bugs  
+
+*(Rest of contributing section same as before)*  
 
 ---
 
@@ -67,9 +86,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 2. **Write Code**: Solve puzzles using real syntax.  
 3. **Defeat Bugs**: Fix errors to advance.  
 4. **Unlock Rewards**: Earn XP and badges!  
-
-![Level Demo](https://via.placeholder.com/600x300/111827/00D166?text=Code+Editor+%26+Game+Preview)  
-
 ---
 
 ## **🤝 Contributing**  
@@ -79,9 +95,6 @@ We welcome contributions! Follow these steps:
 3. Commit changes (`git commit -m 'Add awesome feature'`).  
 4. Push to branch (`git push origin feature/awesome-feature`).  
 5. Open a **Pull Request**.  
-
-Check out **[CONTRIBUTING.md](CONTRIBUTING.md)** for guidelines.  
-
 ---
 
 ## **📜 License**  
@@ -90,21 +103,8 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 ---
 
 <p align="center">
-  Made with ❤️ and <code>const passion = "coding";</code>
+  Made with ❤️ by <code>Syacretary.js</code>
 </p>
-
----
-
-### **🎉 Screenshots & Media**  
-| Game Menu | Code Challenge | Victory Screen |  
-|-----------|----------------|----------------|  
-| ![Menu](https://via.placeholder.com/250) | ![Challenge](https://via.placeholder.com/250) | ![Victory](https://via.placeholder.com/250) |  
-
-*(Replace placeholders with actual screenshots/GIFs)*  
-
----
-
-**✨ Pro Tip**: Add a [GitHub Pages](https://pages.github.com/) deployment link if available!  
 
 ---
 
