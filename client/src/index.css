@@ -48,6 +48,9 @@
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    overscroll-behavior: none;
   }
 }
 
@@ -163,4 +166,45 @@ canvas {
   width: 100% !important;
   height: 100% !important;
   touch-action: none;
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .mobile-full {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-text-center {
+    text-align: center !important;
+  }
+  
+  .mobile-compact {
+    padding: 0.5rem !important;
+    margin: 0.25rem !important;
+  }
+  
+  .mobile-stretch {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Increase touch targets for mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
